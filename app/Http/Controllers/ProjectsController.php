@@ -43,7 +43,7 @@ class ProjectsController extends Controller
 	public function store()
 	{	
 		$this->validate(request(),[
-
+			
 			'name' => 'required', 
 			'description' => 'required', 
 			'start_date' => 'required', 
@@ -53,7 +53,7 @@ class ProjectsController extends Controller
 
 
 		Project::create(request([
-
+			'user',
 			'name', 
 			'description', 
 			'start_date', 

@@ -165,3 +165,7 @@ Route::post('/users/{user}/store_hobbies',  ['as' => 'users.store_hobbies', 'use
 
 //detach hobbies from user
 Route::post('/users/{user}/detach_hobbies',  ['as' => 'users.detach_hobbies', 'uses' => 'UsersController@detachHobbies'])->where('user', '[0-9]+');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
